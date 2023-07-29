@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: job-pod-failure-policy-example
+  name: job-pod-failure-policy
 spec:
   completions: 12
   parallelism: 3
