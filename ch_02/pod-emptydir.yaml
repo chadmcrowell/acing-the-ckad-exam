@@ -4,12 +4,15 @@ metadata:
   name: pod-emptydir
 spec:
   containers:
-  - image: registry.k8s.io/test-webserver
+  - image: busybox:1.28
+    command:
+    - sleep
+    - "3600"
     name: main
     volumeMounts:
-    - mountPath: /cache
-      name: cache-volume
+    - mountPath: /var/log
+      name: logvol
   volumes:
-  - name: cache-volume
+  - name: logvol
     emptyDir:
       sizeLimit: 500Mi
