@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: emptydir-simple
+spec:
+  containers:
+  - image: busybox
+    name: container1
+    command:
+      - sleep
+      - "3600"
+    volumeMounts:
+      - mountPath: /scratch/container2
+        name: scratch-vol
+  - image: alpine
+    name: container2
+    command: ['sh', '-c', 'echo I am Container 1; sleep 3600']
+    volumeMounts:
+      - mountPath: /scratch/containe2
+        name: scratch-vol
+  volumes:
+  - name: scratch-vol
+    emptyDir: {}
