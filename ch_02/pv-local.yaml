@@ -9,7 +9,7 @@ spec:
   - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
   local:
-    path: /tmp
+    path: /mnt
   nodeAffinity:
     required:
       nodeSelectorTerms:
