@@ -4,7 +4,7 @@ metadata:
   name: pod-hostpath
 spec:
   containers:
-  - image: registry.k8s.io/test-webserver
+  - image: nginx
     name: main
     volumeMounts:
     - mountPath: /scratch

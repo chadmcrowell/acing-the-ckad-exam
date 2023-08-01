@@ -5,7 +5,7 @@ metadata:
 spec:
   nodeName: controlplane
   containers:
-  - image: registry.k8s.io/test-webserver
+  - image: nginx
     name: main
     volumeMounts:
     - mountPath: /scratch
