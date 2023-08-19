@@ -14,7 +14,7 @@ spec:
     metadata:
       labels:
         app: hello-java-blue
-        version: v2
+        version: v1
     spec:
       containers:
       - image: chadmcrowell/hello-java-blue
