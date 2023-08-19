@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: hello-java-green
+    version: v2
+  name: hello-java-green-v2
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: hello-java-green
+  template:
+    metadata:
+      labels:
+        app: hello-java-green
+        version: v2
+    spec:
+      containers:
+      - image: chadmcrowell/hello-java-green
+        name: hello-java-green
